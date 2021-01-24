@@ -1,0 +1,1416 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "background": "white",
+  "padding": 5,
+  "width": 800,
+  "title": {
+    "text": "Использование мощностей на российских АЭС по данным Росэнергоатома",
+    "fontSize": 24,
+    "subtitle": ["©2021 Геннадий Лоскутов", ""],
+    "anchor": "start"
+  },
+  "data": [
+    {"name": "npp_store"},
+    {
+      "name": "index_store",
+      "values": [
+        {
+          "unit": "concat_2_layer_1",
+          "fields": [
+            {"field": "yearmonthdate_ts_ms", "channel": "x", "type": "E"}
+          ],
+          "values": [0]
+        }
+      ]
+    },
+    {
+      "name": "npp_data",
+      "format": {},
+      "values": [
+        {"u": "БАЛАКОВСКАЯ", "ts": 1610283600, "kium": 75, "mw": 3214, "op": 3},
+        {"u": "БАЛАКОВСКАЯ", "ts": 1610370900, "kium": 75, "mw": 3217, "op": 3},
+        {"u": "БАЛАКОВСКАЯ", "ts": 1610460000, "kium": 75, "mw": 3218, "op": 3},
+        {"u": "БАЛАКОВСКАЯ", "ts": 1610531100, "kium": 75, "mw": 3213, "op": 3},
+        {"u": "БАЛАКОВСКАЯ", "ts": 1610622000, "kium": 75, "mw": 3217, "op": 3},
+        {"u": "БАЛАКОВСКАЯ", "ts": 1610722800, "kium": 76, "mw": 3220, "op": 3},
+        {"u": "БЕЛОЯРСКАЯ", "ts": 1610283660, "kium": 51, "mw": 614, "op": 1},
+        {"u": "БЕЛОЯРСКАЯ", "ts": 1610370960, "kium": 51, "mw": 615, "op": 1},
+        {"u": "БЕЛОЯРСКАЯ", "ts": 1610460060, "kium": 51, "mw": 610, "op": 1},
+        {"u": "БЕЛОЯРСКАЯ", "ts": 1610531160, "kium": 51, "mw": 610, "op": 1},
+        {"u": "БЕЛОЯРСКАЯ", "ts": 1610622060, "kium": 51, "mw": 611, "op": 1},
+        {"u": "БЕЛОЯРСКАЯ", "ts": 1610722860, "kium": 52, "mw": 621, "op": 1},
+        {"u": "БИЛИБИНСКАЯ", "ts": 1610283720, "kium": 67, "mw": 18, "op": 3},
+        {"u": "БИЛИБИНСКАЯ", "ts": 1610371020, "kium": 67, "mw": 18, "op": 3},
+        {"u": "БИЛИБИНСКАЯ", "ts": 1610460120, "kium": 67, "mw": 18, "op": 3},
+        {"u": "БИЛИБИНСКАЯ", "ts": 1610531220, "kium": 67, "mw": 18, "op": 3},
+        {"u": "БИЛИБИНСКАЯ", "ts": 1610622120, "kium": 66, "mw": 16, "op": 3},
+        {"u": "БИЛИБИНСКАЯ", "ts": 1610722920, "kium": 66, "mw": 16, "op": 3},
+        {
+          "u": "КАЛИНИНСКАЯ",
+          "ts": 1610283780,
+          "kium": 100,
+          "mw": 4284,
+          "op": 4
+        },
+        {
+          "u": "КАЛИНИНСКАЯ",
+          "ts": 1610371080,
+          "kium": 100,
+          "mw": 4283,
+          "op": 4
+        },
+        {
+          "u": "КАЛИНИНСКАЯ",
+          "ts": 1610460180,
+          "kium": 100,
+          "mw": 4290,
+          "op": 4
+        },
+        {
+          "u": "КАЛИНИНСКАЯ",
+          "ts": 1610531280,
+          "kium": 100,
+          "mw": 4286,
+          "op": 4
+        },
+        {
+          "u": "КАЛИНИНСКАЯ",
+          "ts": 1610622180,
+          "kium": 100,
+          "mw": 4287,
+          "op": 4
+        },
+        {
+          "u": "КАЛИНИНСКАЯ",
+          "ts": 1610722980,
+          "kium": 100,
+          "mw": 4289,
+          "op": 4
+        },
+        {"u": "КОЛЬСКАЯ", "ts": 1610283840, "kium": 62, "mw": 1299, "op": 4},
+        {"u": "КОЛЬСКАЯ", "ts": 1610371140, "kium": 73, "mw": 1334, "op": 4},
+        {"u": "КОЛЬСКАЯ", "ts": 1610460240, "kium": 73, "mw": 1338, "op": 4},
+        {"u": "КОЛЬСКАЯ", "ts": 1610531340, "kium": 75, "mw": 1377, "op": 4},
+        {"u": "КОЛЬСКАЯ", "ts": 1610622240, "kium": 75, "mw": 1379, "op": 4},
+        {"u": "КОЛЬСКАЯ", "ts": 1610723040, "kium": 73, "mw": 1344, "op": 4},
+        {"u": "КУРСКАЯ", "ts": 1610283900, "kium": 100, "mw": 4109, "op": 4},
+        {"u": "КУРСКАЯ", "ts": 1610371200, "kium": 100, "mw": 4132, "op": 4},
+        {"u": "КУРСКАЯ", "ts": 1610460300, "kium": 100, "mw": 4115, "op": 4},
+        {"u": "КУРСКАЯ", "ts": 1610531400, "kium": 100, "mw": 4112, "op": 4},
+        {"u": "КУРСКАЯ", "ts": 1610622300, "kium": 100, "mw": 4130, "op": 4},
+        {"u": "КУРСКАЯ", "ts": 1610723100, "kium": 100, "mw": 4106, "op": 4},
+        {
+          "u": "ЛЕНИНГРАДСКАЯ",
+          "ts": 1610283960,
+          "kium": 77,
+          "mw": 3209,
+          "op": 3
+        },
+        {
+          "u": "ЛЕНИНГРАДСКАЯ",
+          "ts": 1610371260,
+          "kium": 71,
+          "mw": 2927,
+          "op": 3
+        },
+        {
+          "u": "ЛЕНИНГРАДСКАЯ",
+          "ts": 1610460360,
+          "kium": 77,
+          "mw": 3193,
+          "op": 3
+        },
+        {
+          "u": "ЛЕНИНГРАДСКАЯ",
+          "ts": 1610531460,
+          "kium": 87,
+          "mw": 4148,
+          "op": 3
+        },
+        {
+          "u": "ЛЕНИНГРАДСКАЯ",
+          "ts": 1610622360,
+          "kium": 78,
+          "mw": 3631,
+          "op": 3
+        },
+        {
+          "u": "ЛЕНИНГРАДСКАЯ",
+          "ts": 1610723160,
+          "kium": 68,
+          "mw": 3133,
+          "op": 2
+        },
+        {
+          "u": "НОВОВОРОНЕЖСКАЯ",
+          "ts": 1610284020,
+          "kium": 77,
+          "mw": 2611,
+          "op": 3
+        },
+        {
+          "u": "НОВОВОРОНЕЖСКАЯ",
+          "ts": 1610371320,
+          "kium": 77,
+          "mw": 2616,
+          "op": 3
+        },
+        {
+          "u": "НОВОВОРОНЕЖСКАЯ",
+          "ts": 1610460420,
+          "kium": 77,
+          "mw": 2615,
+          "op": 3
+        },
+        {
+          "u": "НОВОВОРОНЕЖСКАЯ",
+          "ts": 1610531520,
+          "kium": 77,
+          "mw": 2615,
+          "op": 3
+        },
+        {
+          "u": "НОВОВОРОНЕЖСКАЯ",
+          "ts": 1610622420,
+          "kium": 77,
+          "mw": 2609,
+          "op": 3
+        },
+        {
+          "u": "НОВОВОРОНЕЖСКАЯ",
+          "ts": 1610723220,
+          "kium": 77,
+          "mw": 2614,
+          "op": 3
+        },
+        {"u": "ПАТЭС", "ts": 1610284200, "kium": 38, "mw": 18, "op": 1},
+        {"u": "ПАТЭС", "ts": 1610371500, "kium": 39, "mw": 20, "op": 1},
+        {"u": "ПАТЭС", "ts": 1610460600, "kium": 39, "mw": 19, "op": 1},
+        {"u": "ПАТЭС", "ts": 1610531700, "kium": 39, "mw": 19, "op": 1},
+        {"u": "ПАТЭС", "ts": 1610622600, "kium": 39, "mw": 19, "op": 1},
+        {"u": "ПАТЭС", "ts": 1610723400, "kium": 37, "mw": 15, "op": 1},
+        {"u": "РОСТОВСКАЯ", "ts": 1610284080, "kium": 100, "mw": 4313, "op": 4},
+        {"u": "РОСТОВСКАЯ", "ts": 1610371380, "kium": 100, "mw": 4315, "op": 4},
+        {"u": "РОСТОВСКАЯ", "ts": 1610460480, "kium": 100, "mw": 4318, "op": 4},
+        {"u": "РОСТОВСКАЯ", "ts": 1610531580, "kium": 100, "mw": 4308, "op": 4},
+        {"u": "РОСТОВСКАЯ", "ts": 1610622480, "kium": 100, "mw": 4305, "op": 4},
+        {"u": "РОСТОВСКАЯ", "ts": 1610723280, "kium": 100, "mw": 4321, "op": 4},
+        {"u": "СМОЛЕНСКАЯ", "ts": 1610284140, "kium": 67, "mw": 2087, "op": 2},
+        {"u": "СМОЛЕНСКАЯ", "ts": 1610371440, "kium": 67, "mw": 2089, "op": 2},
+        {"u": "СМОЛЕНСКАЯ", "ts": 1610460540, "kium": 47, "mw": 1491, "op": 2},
+        {"u": "СМОЛЕНСКАЯ", "ts": 1610531640, "kium": 50, "mw": 1548, "op": 2},
+        {"u": "СМОЛЕНСКАЯ", "ts": 1610622540, "kium": 64, "mw": 1950, "op": 2},
+        {"u": "СМОЛЕНСКАЯ", "ts": 1610723340, "kium": 68, "mw": 2084, "op": 2}
+      ]
+    },
+    {
+      "name": "source_0",
+      "url": "https://static.observableusercontent.com/files/0952826824f18ae83302c8529ac7012f24af77c62f78bc9e6c170447a0f0e65adada03505e6e153e63aa09c466bfe5336ced76ecc0e704f84454d6bb62be3c45?response-content-disposition=attachment%3Bfilename*%3DUTF-8%27%27russia_ne50.geojson",
+      "format": {"type": "json"}
+    },
+    {
+      "name": "npp_info",
+      "values": [
+        {
+          "u": "БАЛАКОВСКАЯ",
+          "latitude": 52.092,
+          "longitude": 47.947,
+          "units": 4,
+          "capacity": 4000
+        },
+        {
+          "u": "БЕЛОЯРСКАЯ",
+          "latitude": 56.842,
+          "longitude": 61.317,
+          "units": 2,
+          "capacity": 1485
+        },
+        {
+          "u": "БИЛИБИНСКАЯ",
+          "latitude": 68.05,
+          "longitude": 166.534,
+          "units": 3,
+          "capacity": 36
+        },
+        {
+          "u": "КАЛИНИНСКАЯ",
+          "latitude": 57.903,
+          "longitude": 35.053,
+          "units": 4,
+          "capacity": 4000
+        },
+        {
+          "u": "КОЛЬСКАЯ",
+          "latitude": 67.464,
+          "longitude": 32.479,
+          "units": 4,
+          "capacity": 1760
+        },
+        {
+          "u": "КУРСКАЯ",
+          "latitude": 51.675,
+          "longitude": 35.602,
+          "units": 4,
+          "capacity": 4000
+        },
+        {
+          "u": "ЛЕНИНГРАДСКАЯ",
+          "latitude": 59.828,
+          "longitude": 29.051,
+          "units": 3,
+          "capacity": 3200
+        },
+        {
+          "u": "НОВОВОРОНЕЖСКАЯ",
+          "latitude": 51.268,
+          "longitude": 39.211,
+          "units": 4,
+          "capacity": 3747
+        },
+        {
+          "u": "РОСТОВСКАЯ",
+          "latitude": 47.604,
+          "longitude": 42.372,
+          "units": 4,
+          "capacity": 4030
+        },
+        {
+          "u": "СМОЛЕНСКАЯ",
+          "latitude": 54.166,
+          "longitude": 33.231,
+          "units": 3,
+          "capacity": 3000
+        },
+        {
+          "u": "ПАТЭС",
+          "latitude": 69.683,
+          "longitude": 170.265,
+          "units": 2,
+          "capacity": 74
+        }
+      ]
+    },
+    {
+      "name": "data_0",
+      "source": "npp_data",
+      "transform": [
+        {"type": "formula", "expr": "1000*datum.ts", "as": "ts_1"},
+        {
+          "field": "ts_1",
+          "type": "timeunit",
+          "units": ["year", "month", "date"],
+          "as": ["ts_ms", "ts_ms_end"]
+        }
+      ]
+    },
+    {
+      "name": "data_1",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "joinaggregate",
+          "as": ["lower_box_kium", "upper_box_kium"],
+          "ops": ["q1", "q3"],
+          "fields": ["kium", "kium"],
+          "groupby": ["u"]
+        },
+        {
+          "type": "filter",
+          "expr": "(datum[\"lower_box_kium\"] - 1.5 * (datum[\"upper_box_kium\"] - datum[\"lower_box_kium\"]) <= datum[\"kium\"]) && (datum[\"kium\"] <= datum[\"upper_box_kium\"] + 1.5 * (datum[\"upper_box_kium\"] - datum[\"lower_box_kium\"]))"
+        },
+        {
+          "type": "aggregate",
+          "groupby": ["u"],
+          "ops": ["min", "max", "min", "max"],
+          "fields": ["kium", "kium", "lower_box_kium", "upper_box_kium"],
+          "as": [
+            "lower_whisker_kium",
+            "upper_whisker_kium",
+            "lower_box_kium",
+            "upper_box_kium"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "data_2",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["u"],
+          "ops": ["q1", "q3", "median", "min", "max"],
+          "fields": ["kium", "kium", "kium", "kium", "kium"],
+          "as": [
+            "lower_box_kium",
+            "upper_box_kium",
+            "mid_box_kium",
+            "min_kium",
+            "max_kium"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "data_3",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "window",
+          "params": [null],
+          "as": ["ts_rank"],
+          "ops": ["rank"],
+          "fields": [null],
+          "sort": {"field": ["ts"], "order": ["descending"]},
+          "groupby": ["u"]
+        },
+        {"type": "filter", "expr": "datum.ts_rank <= 30"}
+      ]
+    },
+    {
+      "name": "data_4",
+      "source": "data_3",
+      "transform": [
+        {
+          "type": "window",
+          "params": [1],
+          "as": ["op_1"],
+          "ops": ["lag"],
+          "fields": ["op"],
+          "sort": {"field": ["ts"], "order": ["ascending"]},
+          "groupby": ["u"]
+        },
+        {"type": "filter", "expr": "datum.op !== datum.op_1"},
+        {
+          "type": "formula",
+          "expr": "datum.op_1 + '➔' + datum.op",
+          "as": "unit_change"
+        },
+        {
+          "field": "ts_ms",
+          "type": "timeunit",
+          "units": ["year", "month", "date"],
+          "as": ["yearmonthdate_ts_ms", "yearmonthdate_ts_ms_end"]
+        },
+        {
+          "type": "filter",
+          "expr": "(isDate(datum[\"yearmonthdate_ts_ms\"]) || (isValid(datum[\"yearmonthdate_ts_ms\"]) && isFinite(+datum[\"yearmonthdate_ts_ms\"])))"
+        }
+      ]
+    },
+    {
+      "name": "data_5",
+      "source": "data_3",
+      "transform": [
+        {
+          "field": "ts_ms",
+          "type": "timeunit",
+          "units": ["year", "month", "date"],
+          "as": ["yearmonthdate_ts_ms", "yearmonthdate_ts_ms_end"]
+        }
+      ]
+    },
+    {
+      "name": "data_6",
+      "source": "data_5",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "!(length(data(\"index_store\"))) || (vlSelectionTest(\"index_store\", datum))"
+        },
+        {
+          "type": "filter",
+          "expr": "(isDate(datum[\"yearmonthdate_ts_ms\"]) || (isValid(datum[\"yearmonthdate_ts_ms\"]) && isFinite(+datum[\"yearmonthdate_ts_ms\"])))"
+        }
+      ]
+    },
+    {
+      "name": "data_7",
+      "source": "data_5",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "(isDate(datum[\"yearmonthdate_ts_ms\"]) || (isValid(datum[\"yearmonthdate_ts_ms\"]) && isFinite(+datum[\"yearmonthdate_ts_ms\"]))) && isValid(datum[\"mw\"]) && isFinite(+datum[\"mw\"])"
+        }
+      ]
+    },
+    {
+      "name": "data_8",
+      "source": "data_5",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "(isDate(datum[\"yearmonthdate_ts_ms\"]) || (isValid(datum[\"yearmonthdate_ts_ms\"]) && isFinite(+datum[\"yearmonthdate_ts_ms\"])))"
+        }
+      ]
+    },
+    {
+      "name": "data_9",
+      "source": "data_0",
+      "transform": [
+        {
+          "field": "ts_ms",
+          "type": "timeunit",
+          "units": ["year", "month", "date"],
+          "as": ["yearmonthdate_ts_ms", "yearmonthdate_ts_ms_end"]
+        },
+        {
+          "type": "filter",
+          "expr": "!(length(data(\"index_store\"))) || (vlSelectionTest(\"index_store\", datum))"
+        },
+        {
+          "type": "lookup",
+          "from": "npp_info",
+          "key": "u",
+          "fields": ["u"],
+          "values": ["latitude", "longitude", "units"]
+        },
+        {
+          "type": "formula",
+          "expr": "datum.op + ' из ' + datum.units + ' блоков'",
+          "as": "unit_info"
+        }
+      ]
+    },
+    {
+      "name": "data_10",
+      "source": "data_9",
+      "transform": [
+        {
+          "type": "geopoint",
+          "projection": "projection",
+          "fields": ["longitude", "latitude"],
+          "as": ["concat_3_layer_2_layer_0_x", "concat_3_layer_2_layer_0_y"]
+        },
+        {
+          "type": "filter",
+          "expr": "isValid(datum[\"kium\"]) && isFinite(+datum[\"kium\"])"
+        }
+      ]
+    },
+    {
+      "name": "data_11",
+      "source": "data_9",
+      "transform": [
+        {
+          "type": "geopoint",
+          "projection": "projection",
+          "fields": ["longitude", "latitude"],
+          "as": ["concat_3_layer_2_layer_1_x", "concat_3_layer_2_layer_1_y"]
+        }
+      ]
+    },
+    {"name": "source_1", "transform": [{"type": "graticule", "step": [10, 10]}]}
+  ],
+  "projections": [
+    {
+      "name": "projection",
+      "translate": {"signal": "[width / 2, height / 2]"},
+      "type": "mercator",
+      "scale": 265,
+      "center": [95, 78],
+      "rotate": [-10, 0, 0]
+    }
+  ],
+  "signals": [
+    {"name": "concat_0_y_step", "value": 20},
+    {
+      "name": "concat_0_height",
+      "update": "bandspace(domain('concat_0_y').length, 0, 0) * concat_0_y_step"
+    },
+    {"name": "concat_1_y_step", "value": 20},
+    {
+      "name": "concat_1_height",
+      "update": "bandspace(domain('concat_1_y').length, 1, 0.5) * concat_1_y_step"
+    },
+    {"name": "concat_2_height", "value": 300},
+    {"name": "concat_3_height", "value": 400},
+    {
+      "name": "unit",
+      "value": {},
+      "on": [
+        {"events": "mousemove", "update": "isTuple(group()) ? group() : unit"}
+      ]
+    },
+    {
+      "name": "npp_u_legend",
+      "value": null,
+      "on": [
+        {
+          "events": [
+            {"source": "view", "type": "click", "markname": "u_legend_symbols"},
+            {"source": "view", "type": "click", "markname": "u_legend_labels"},
+            {"source": "view", "type": "click", "markname": "u_legend_entries"}
+          ],
+          "update": "datum.value || item().items[0].items[0].datum.value",
+          "force": true
+        },
+        {
+          "events": [{"source": "view", "type": "click"}],
+          "update": "!event.item || !datum ? null : npp_u_legend",
+          "force": true
+        }
+      ]
+    },
+    {"name": "npp", "update": "vlSelectionResolve(\"npp_store\", \"union\")"},
+    {
+      "name": "index",
+      "update": "vlSelectionResolve(\"index_store\", \"union\")"
+    }
+  ],
+  "layout": {"padding": 20, "columns": 1, "bounds": "full", "align": "each"},
+  "marks": [
+    {
+      "type": "group",
+      "name": "concat_0_group",
+      "title": {
+        "text": "Распределение КИУМ по каждой АЭС за последние 365 дней",
+        "frame": "group"
+      },
+      "style": "cell",
+      "encode": {
+        "update": {
+          "width": {"signal": "width"},
+          "height": {"signal": "concat_0_height"}
+        }
+      },
+      "marks": [
+        {
+          "name": "concat_0_layer_0_layer_0_layer_0_marks",
+          "type": "rule",
+          "style": ["rule"],
+          "interactive": true,
+          "from": {"data": "data_1"},
+          "encode": {
+            "update": {
+              "stroke": {"scale": "concat_0_color", "field": "u"},
+              "opacity": [
+                {
+                  "test": "!(length(data(\"npp_store\"))) || (vlSelectionTest(\"npp_store\", datum))",
+                  "value": 1
+                },
+                {"value": 0.1}
+              ],
+              "tooltip": {
+                "signal": "{\"АЭС\": isValid(datum[\"u\"]) ? datum[\"u\"] : \"\"+datum[\"u\"], \"Максимум\": format(datum[\"upper_whisker_kium\"], \"\"), \"Минимум\": format(datum[\"lower_whisker_kium\"], \"\")}"
+              },
+              "description": {
+                "signal": "\"КИУМ: \" + (format(datum[\"lower_whisker_kium\"], \"\")) + \"; lower_box_kium: \" + (format(datum[\"lower_box_kium\"], \"\")) + \"; АЭС: \" + (isValid(datum[\"u\"]) ? datum[\"u\"] : \"\"+datum[\"u\"]) + \"; Максимум: \" + (format(datum[\"upper_whisker_kium\"], \"\")) + \"; Минимум: \" + (format(datum[\"lower_whisker_kium\"], \"\"))"
+              },
+              "x": {"scale": "concat_0_x", "field": "lower_whisker_kium"},
+              "x2": {"scale": "concat_0_x", "field": "lower_box_kium"},
+              "y": {"scale": "concat_0_y", "field": "u", "band": 0.5}
+            }
+          }
+        },
+        {
+          "name": "concat_0_layer_0_layer_0_layer_1_marks",
+          "type": "rule",
+          "style": ["rule"],
+          "interactive": true,
+          "from": {"data": "data_1"},
+          "encode": {
+            "update": {
+              "stroke": {"scale": "concat_0_color", "field": "u"},
+              "opacity": [
+                {
+                  "test": "!(length(data(\"npp_store\"))) || (vlSelectionTest(\"npp_store\", datum))",
+                  "value": 1
+                },
+                {"value": 0.1}
+              ],
+              "tooltip": {
+                "signal": "{\"АЭС\": isValid(datum[\"u\"]) ? datum[\"u\"] : \"\"+datum[\"u\"], \"Максимум\": format(datum[\"upper_whisker_kium\"], \"\"), \"Минимум\": format(datum[\"lower_whisker_kium\"], \"\")}"
+              },
+              "description": {
+                "signal": "\"КИУМ: \" + (format(datum[\"upper_box_kium\"], \"\")) + \"; upper_whisker_kium: \" + (format(datum[\"upper_whisker_kium\"], \"\")) + \"; АЭС: \" + (isValid(datum[\"u\"]) ? datum[\"u\"] : \"\"+datum[\"u\"]) + \"; Максимум: \" + (format(datum[\"upper_whisker_kium\"], \"\")) + \"; Минимум: \" + (format(datum[\"lower_whisker_kium\"], \"\"))"
+              },
+              "x": {"scale": "concat_0_x", "field": "upper_box_kium"},
+              "x2": {"scale": "concat_0_x", "field": "upper_whisker_kium"},
+              "y": {"scale": "concat_0_y", "field": "u", "band": 0.5}
+            }
+          }
+        },
+        {
+          "name": "concat_0_layer_1_layer_0_marks",
+          "type": "rect",
+          "style": ["bar"],
+          "interactive": true,
+          "from": {"data": "data_2"},
+          "encode": {
+            "update": {
+              "fill": {"scale": "concat_0_color", "field": "u"},
+              "opacity": [
+                {
+                  "test": "!(length(data(\"npp_store\"))) || (vlSelectionTest(\"npp_store\", datum))",
+                  "value": 1
+                },
+                {"value": 0.1}
+              ],
+              "tooltip": {
+                "signal": "{\"АЭС\": isValid(datum[\"u\"]) ? datum[\"u\"] : \"\"+datum[\"u\"], \"Максимум\": format(datum[\"max_kium\"], \"\"), \"75%\": format(datum[\"upper_box_kium\"], \"\"), \"50%\": format(datum[\"mid_box_kium\"], \"\"), \"25%\": format(datum[\"lower_box_kium\"], \"\"), \"Минимум\": format(datum[\"min_kium\"], \"\")}"
+              },
+              "ariaRoleDescription": {"value": "bar"},
+              "description": {
+                "signal": "\"КИУМ: \" + (format(datum[\"lower_box_kium\"], \"\")) + \"; upper_box_kium: \" + (format(datum[\"upper_box_kium\"], \"\")) + \"; АЭС: \" + (isValid(datum[\"u\"]) ? datum[\"u\"] : \"\"+datum[\"u\"]) + \"; Максимум: \" + (format(datum[\"max_kium\"], \"\")) + \"; 75%: \" + (format(datum[\"upper_box_kium\"], \"\")) + \"; 50%: \" + (format(datum[\"mid_box_kium\"], \"\")) + \"; 25%: \" + (format(datum[\"lower_box_kium\"], \"\")) + \"; Минимум: \" + (format(datum[\"min_kium\"], \"\"))"
+              },
+              "x": {"scale": "concat_0_x", "field": "lower_box_kium"},
+              "x2": {"scale": "concat_0_x", "field": "upper_box_kium"},
+              "yc": {"scale": "concat_0_y", "field": "u", "band": 0.5},
+              "height": {"value": 10}
+            }
+          }
+        },
+        {
+          "name": "concat_0_layer_1_layer_1_marks",
+          "type": "rect",
+          "style": ["tick", "boxplot-median"],
+          "interactive": true,
+          "aria": false,
+          "from": {"data": "data_2"},
+          "encode": {
+            "update": {
+              "opacity": [
+                {
+                  "test": "!(length(data(\"npp_store\"))) || (vlSelectionTest(\"npp_store\", datum))",
+                  "value": 1
+                },
+                {"value": 0.1}
+              ],
+              "fill": {"scale": "concat_0_color", "field": "u"},
+              "tooltip": {
+                "signal": "{\"АЭС\": isValid(datum[\"u\"]) ? datum[\"u\"] : \"\"+datum[\"u\"], \"Максимум\": format(datum[\"max_kium\"], \"\"), \"75%\": format(datum[\"upper_box_kium\"], \"\"), \"50%\": format(datum[\"mid_box_kium\"], \"\"), \"25%\": format(datum[\"lower_box_kium\"], \"\"), \"Минимум\": format(datum[\"min_kium\"], \"\")}"
+              },
+              "xc": {"scale": "concat_0_x", "field": "mid_box_kium"},
+              "yc": {"scale": "concat_0_y", "field": "u", "band": 0.5},
+              "height": {"value": 20},
+              "width": {"value": 1}
+            }
+          }
+        }
+      ],
+      "axes": [
+        {
+          "scale": "concat_0_x",
+          "orient": "bottom",
+          "gridScale": "concat_0_y",
+          "grid": true,
+          "tickCount": {"signal": "ceil(width/40)"},
+          "domain": false,
+          "labels": false,
+          "aria": false,
+          "maxExtent": 0,
+          "minExtent": 0,
+          "ticks": false,
+          "zindex": 0
+        },
+        {
+          "scale": "concat_0_y",
+          "orient": "left",
+          "grid": true,
+          "gridScale": "concat_0_x",
+          "domain": false,
+          "labels": false,
+          "aria": false,
+          "maxExtent": 0,
+          "minExtent": 0,
+          "ticks": false,
+          "zindex": 0
+        },
+        {
+          "scale": "concat_0_x",
+          "orient": "bottom",
+          "grid": false,
+          "title": "КИУМ",
+          "labelFlush": true,
+          "labelOverlap": true,
+          "tickCount": {"signal": "ceil(width/40)"},
+          "zindex": 0
+        },
+        {
+          "scale": "concat_0_y",
+          "orient": "left",
+          "grid": false,
+          "title": "АЭС",
+          "zindex": 0
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "name": "concat_1_group",
+      "title": {
+        "text": "Изменения в числе работающих блоков по каждой АЭС за последние 30 дней",
+        "frame": "group"
+      },
+      "style": "cell",
+      "encode": {
+        "update": {
+          "width": {"signal": "width"},
+          "height": {"signal": "concat_1_height"}
+        }
+      },
+      "marks": [
+        {
+          "name": "concat_1_layer_0_marks",
+          "type": "symbol",
+          "style": ["point"],
+          "interactive": false,
+          "from": {"data": "data_4"},
+          "encode": {
+            "update": {
+              "opacity": [
+                {
+                  "test": "!(length(data(\"npp_store\"))) || (vlSelectionTest(\"npp_store\", datum))",
+                  "value": 1
+                },
+                {"value": 0.1}
+              ],
+              "fill": {"value": "transparent"},
+              "stroke": {"scale": "concat_0_color", "field": "u"},
+              "ariaRoleDescription": {"value": "point"},
+              "description": {
+                "signal": "\"ts_ms (year-month-date): \" + (timeFormat(datum[\"yearmonthdate_ts_ms\"], timeUnitSpecifier([\"year\",\"month\",\"date\"], {\"year-month\":\"%b %Y \",\"year-month-date\":\"%d.%m.%Y \"}))) + \"; u: \" + (isValid(datum[\"u\"]) ? datum[\"u\"] : \"\"+datum[\"u\"]) + \"; АЭС: \" + (isValid(datum[\"u\"]) ? datum[\"u\"] : \"\"+datum[\"u\"])"
+              },
+              "x": {"scale": "concat_1_x", "field": "yearmonthdate_ts_ms"},
+              "y": {"scale": "concat_1_y", "field": "u"}
+            }
+          }
+        },
+        {
+          "name": "concat_1_layer_1_marks",
+          "type": "text",
+          "style": ["text"],
+          "interactive": false,
+          "from": {"data": "data_4"},
+          "encode": {
+            "update": {
+              "align": {"value": "center"},
+              "baseline": {"value": "middle"},
+              "dy": {"value": 10},
+              "fill": {"scale": "concat_0_color", "field": "u"},
+              "opacity": [
+                {
+                  "test": "!(length(data(\"npp_store\"))) || (vlSelectionTest(\"npp_store\", datum))",
+                  "value": 1
+                },
+                {"value": 0.1}
+              ],
+              "description": {
+                "signal": "\"ts_ms (year-month-date): \" + (timeFormat(datum[\"yearmonthdate_ts_ms\"], timeUnitSpecifier([\"year\",\"month\",\"date\"], {\"year-month\":\"%b %Y \",\"year-month-date\":\"%d.%m.%Y \"}))) + \"; u: \" + (isValid(datum[\"u\"]) ? datum[\"u\"] : \"\"+datum[\"u\"]) + \"; АЭС: \" + (isValid(datum[\"u\"]) ? datum[\"u\"] : \"\"+datum[\"u\"]) + \"; unit_change: \" + (isValid(datum[\"unit_change\"]) ? datum[\"unit_change\"] : \"\"+datum[\"unit_change\"])"
+              },
+              "x": {"scale": "concat_1_x", "field": "yearmonthdate_ts_ms"},
+              "y": {"scale": "concat_1_y", "field": "u"},
+              "text": {
+                "signal": "isValid(datum[\"unit_change\"]) ? datum[\"unit_change\"] : \"\"+datum[\"unit_change\"]"
+              }
+            }
+          }
+        }
+      ],
+      "axes": [
+        {
+          "scale": "concat_1_x",
+          "orient": "bottom",
+          "grid": true,
+          "tickCount": "day",
+          "gridScale": "concat_1_y",
+          "domain": false,
+          "labels": false,
+          "aria": false,
+          "maxExtent": 0,
+          "minExtent": 0,
+          "ticks": false,
+          "zindex": 0
+        },
+        {
+          "scale": "concat_1_y",
+          "orient": "left",
+          "grid": true,
+          "gridScale": "concat_1_x",
+          "domain": false,
+          "labels": false,
+          "aria": false,
+          "maxExtent": 0,
+          "minExtent": 0,
+          "ticks": false,
+          "zindex": 0
+        },
+        {
+          "scale": "concat_1_x",
+          "orient": "bottom",
+          "grid": false,
+          "tickCount": "day",
+          "format": {
+            "signal": "timeUnitSpecifier([\"year\",\"month\",\"date\"], {\"year-month\":\"%b %Y \",\"year-month-date\":\"%d.%m.%Y \"})"
+          },
+          "labelFlush": true,
+          "labelOverlap": true,
+          "zindex": 0
+        },
+        {
+          "scale": "concat_1_y",
+          "orient": "left",
+          "grid": false,
+          "title": "АЭС",
+          "zindex": 0
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "name": "concat_2_group",
+      "title": {
+        "text": "Суммарная мощность работающих блоков по каждой АЭС за последние 30 дней",
+        "frame": "group"
+      },
+      "style": "cell",
+      "encode": {
+        "update": {
+          "width": {"signal": "width"},
+          "height": {"signal": "concat_2_height"}
+        }
+      },
+      "signals": [
+        { "name": "init_date_choice", "update": "modify(\"index_store\", {unit: \"concat_2_layer_1\", fields: index_tuple_fields, values: [data('data_5')[0]['yearmonthdate_ts_ms']]}, true)"  },
+        {
+          "name": "npp_tuple",
+          "update": "npp_u_legend !== null ? {fields: npp_tuple_fields, values: [npp_u_legend]} : null"
+        },
+        {"name": "npp_tuple_fields", "value": [{"type": "E", "field": "u"}]},
+        {
+          "name": "npp_modify",
+          "on": [
+            {
+              "events": {"signal": "npp_tuple"},
+              "update": "modify(\"npp_store\", npp_tuple, true)"
+            }
+          ]
+        },
+        {
+          "name": "index_tuple",
+          "on": [
+            {
+              "events": [
+                {
+                  "source": "scope",
+                  "type": "mouseover",
+                  "markname": "concat_2_layer_1_voronoi"
+                }
+              ],
+              "update": "datum && item().mark.marktype !== 'group' ? {unit: \"concat_2_layer_1\", fields: index_tuple_fields, values: [(item().isVoronoi ? datum.datum : datum)[\"yearmonthdate_ts_ms\"]]} : null",
+              "force": true
+            },
+            {
+              "events": [{"source": "scope", "type": "dblclick"}],
+              "update": "null"
+            }
+          ]
+        },
+        {
+          "name": "index_tuple_fields",
+          "value": [
+            {"field": "yearmonthdate_ts_ms", "channel": "x", "type": "E"}
+          ]
+        },
+        {
+          "name": "index_modify",
+          "on": [
+            {
+              "events": {"signal": "index_tuple"},
+              "update": "modify(\"index_store\", index_tuple, true)"
+            }
+          ]
+        }
+      ],
+      "marks": [
+        {
+          "name": "concat_2_layer_0_layer_0_pathgroup",
+          "type": "group",
+          "from": {
+            "facet": {
+              "name": "faceted_path_concat_2_layer_0_layer_0_main",
+              "data": "data_5",
+              "groupby": ["u"]
+            }
+          },
+          "encode": {
+            "update": {
+              "width": {"field": {"group": "width"}},
+              "height": {"field": {"group": "height"}}
+            }
+          },
+          "marks": [
+            {
+              "name": "concat_2_layer_0_layer_0_marks",
+              "type": "line",
+              "style": ["line"],
+              "sort": {"field": "datum[\"yearmonthdate_ts_ms\"]"},
+              "interactive": true,
+              "from": {"data": "faceted_path_concat_2_layer_0_layer_0_main"},
+              "encode": {
+                "update": {
+                  "stroke": {"scale": "concat_0_color", "field": "u"},
+                  "opacity": [
+                    {
+                      "test": "!(length(data(\"npp_store\"))) || (vlSelectionTest(\"npp_store\", datum))",
+                      "value": 1
+                    },
+                    {"value": 0.1}
+                  ],
+                  "description": {
+                    "signal": "\"ts_ms (year-month-date): \" + (timeFormat(datum[\"yearmonthdate_ts_ms\"], timeUnitSpecifier([\"year\",\"month\",\"date\"], {\"year-month\":\"%b %Y \",\"year-month-date\":\"%d.%m.%Y \"}))) + \"; mw: \" + (format(datum[\"mw\"], \"\")) + \"; АЭС: \" + (isValid(datum[\"u\"]) ? datum[\"u\"] : \"\"+datum[\"u\"])"
+                  },
+                  "x": {"scale": "concat_2_x", "field": "yearmonthdate_ts_ms"},
+                  "y": {"scale": "concat_2_y", "field": "mw"},
+                  "strokeWidth": {"value": 3},
+                  "defined": {
+                    "signal": "isValid(datum[\"yearmonthdate_ts_ms\"]) && isFinite(+datum[\"yearmonthdate_ts_ms\"]) && isValid(datum[\"mw\"]) && isFinite(+datum[\"mw\"])"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "concat_2_layer_0_layer_1_marks",
+          "type": "symbol",
+          "style": ["point"],
+          "interactive": false,
+          "from": {"data": "data_7"},
+          "encode": {
+            "update": {
+              "opacity": [
+                {
+                  "test": "!(length(data(\"npp_store\"))) || (vlSelectionTest(\"npp_store\", datum))",
+                  "value": 1
+                },
+                {"value": 0.1}
+              ],
+              "fill": {"scale": "concat_0_color", "field": "u"},
+              "ariaRoleDescription": {"value": "point"},
+              "description": {
+                "signal": "\"ts_ms (year-month-date): \" + (timeFormat(datum[\"yearmonthdate_ts_ms\"], timeUnitSpecifier([\"year\",\"month\",\"date\"], {\"year-month\":\"%b %Y \",\"year-month-date\":\"%d.%m.%Y \"}))) + \"; mw: \" + (format(datum[\"mw\"], \"\")) + \"; АЭС: \" + (isValid(datum[\"u\"]) ? datum[\"u\"] : \"\"+datum[\"u\"])"
+              },
+              "x": {"scale": "concat_2_x", "field": "yearmonthdate_ts_ms"},
+              "y": {"scale": "concat_2_y", "field": "mw"}
+            }
+          }
+        },
+        {
+          "name": "concat_2_layer_1_marks",
+          "type": "symbol",
+          "style": ["point"],
+          "interactive": true,
+          "from": {"data": "data_8"},
+          "encode": {
+            "update": {
+              "opacity": {"value": 0},
+              "fill": {"value": "transparent"},
+              "stroke": {"value": "#4c78a8"},
+              "ariaRoleDescription": {"value": "point"},
+              "description": {
+                "signal": "\"ts_ms (year-month-date): \" + (timeFormat(datum[\"yearmonthdate_ts_ms\"], timeUnitSpecifier([\"year\",\"month\",\"date\"], {\"year-month\":\"%b %Y \",\"year-month-date\":\"%d.%m.%Y \"})))"
+              },
+              "x": {"scale": "concat_2_x", "field": "yearmonthdate_ts_ms"},
+              "y": {"signal": "concat_2_height", "mult": 0.5}
+            }
+          }
+        },
+        {
+          "name": "concat_2_layer_1_voronoi",
+          "type": "path",
+          "interactive": true,
+          "from": {"data": "concat_2_layer_1_marks"},
+          "encode": {
+            "update": {
+              "fill": {"value": "transparent"},
+              "strokeWidth": {"value": 0.35},
+              "stroke": {"value": "transparent"},
+              "isVoronoi": {"value": true}
+            }
+          },
+          "transform": [
+            {
+              "type": "voronoi",
+              "x": {"expr": "datum.datum.x || 0"},
+              "y": {"expr": "0"},
+              "size": [{"signal": "width"}, {"signal": "concat_2_height"}]
+            }
+          ]
+        },
+        {
+          "name": "concat_2_layer_2_marks",
+          "type": "rule",
+          "style": ["rule"],
+          "interactive": false,
+          "from": {"data": "data_6"},
+          "encode": {
+            "update": {
+              "stroke": {"value": "firebrick"},
+              "description": {
+                "signal": "\"ts_ms (year-month-date): \" + (timeFormat(datum[\"yearmonthdate_ts_ms\"], timeUnitSpecifier([\"year\",\"month\",\"date\"], {\"year-month\":\"%b %Y \",\"year-month-date\":\"%d.%m.%Y \"})))"
+              },
+              "x": {"scale": "concat_2_x", "field": "yearmonthdate_ts_ms"},
+              "y": {"value": 0},
+              "y2": {"field": {"group": "height"}},
+              "strokeWidth": {"value": 2}
+            }
+          }
+        },
+        {
+          "name": "concat_2_layer_3_marks",
+          "type": "text",
+          "style": ["text"],
+          "interactive": false,
+          "from": {"data": "data_6"},
+          "encode": {
+            "update": {
+              "align": {"value": "left"},
+              "dx": {"value": 10},
+              "dy": {"value": 130},
+              "fill": {"value": "firebrick"},
+              "description": {
+                "signal": "\"ts_ms (year-month-date): \" + (timeFormat(datum[\"yearmonthdate_ts_ms\"], timeUnitSpecifier([\"year\",\"month\",\"date\"], {\"year-month\":\"%b %Y \",\"year-month-date\":\"%d.%m.%Y \"})))"
+              },
+              "x": {"scale": "concat_2_x", "field": "yearmonthdate_ts_ms"},
+              "y": {"signal": "concat_2_height", "mult": 0.5},
+              "text": {
+                "signal": "timeFormat(datum[\"yearmonthdate_ts_ms\"], timeUnitSpecifier([\"year\",\"month\",\"date\"], {\"year-month\":\"%b %Y \",\"year-month-date\":\"%d.%m.%Y \"}))"
+              },
+              "baseline": {"value": "middle"}
+            }
+          }
+        }
+      ],
+      "axes": [
+        {
+          "scale": "concat_2_x",
+          "orient": "bottom",
+          "grid": true,
+          "tickCount": "day",
+          "gridScale": "concat_2_y",
+          "domain": false,
+          "labels": false,
+          "aria": false,
+          "maxExtent": 0,
+          "minExtent": 0,
+          "ticks": false,
+          "zindex": 0
+        },
+        {
+          "scale": "concat_2_y",
+          "orient": "left",
+          "grid": true,
+          "gridScale": "concat_2_x",
+          "tickCount": {"signal": "ceil(concat_2_height/40)"},
+          "domain": false,
+          "labels": false,
+          "aria": false,
+          "maxExtent": 0,
+          "minExtent": 0,
+          "ticks": false,
+          "zindex": 0
+        },
+        {
+          "scale": "concat_2_x",
+          "orient": "bottom",
+          "grid": false,
+          "tickCount": "day",
+          "format": {
+            "signal": "timeUnitSpecifier([\"year\",\"month\",\"date\"], {\"year-month\":\"%b %Y \",\"year-month-date\":\"%d.%m.%Y \"})"
+          },
+          "labelFlush": true,
+          "labelOverlap": true,
+          "zindex": 0
+        },
+        {
+          "scale": "concat_2_y",
+          "orient": "left",
+          "grid": false,
+          "title": "Суммарная мощность работающих блоков, МВт",
+          "labelOverlap": true,
+          "tickCount": {"signal": "ceil(concat_2_height/40)"},
+          "zindex": 0
+        }
+      ],
+      "legends": [
+        {
+          "title": "АЭС",
+          "stroke": "concat_0_color",
+          "symbolType": "triangle",
+          "encode": {
+            "labels": {
+              "name": "u_legend_labels",
+              "interactive": true,
+              "update": {
+                "opacity": [
+                  {
+                    "test": "(!length(data(\"npp_store\")) || (npp[\"u\"] && indexof(npp[\"u\"], datum.value) >= 0))",
+                    "value": 1
+                  },
+                  {"value": 0.35}
+                ]
+              }
+            },
+            "symbols": {
+              "name": "u_legend_symbols",
+              "interactive": true,
+              "update": {
+                "opacity": [
+                  {
+                    "test": "(!length(data(\"npp_store\")) || (npp[\"u\"] && indexof(npp[\"u\"], datum.value) >= 0))",
+                    "value": 1
+                  },
+                  {"value": 0.35}
+                ]
+              }
+            },
+            "entries": {
+              "name": "u_legend_entries",
+              "interactive": true,
+              "update": {"fill": {"value": "transparent"}}
+            }
+          },
+          "fill": "concat_0_color"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "name": "concat_3_group",
+      "title": {
+        "text": "КИУМ по каждой АЭС",
+        "frame": "group"
+      },
+      "style": "cell",
+      "encode": {
+        "update": {
+          "width": {"signal": "width"},
+          "height": {"signal": "concat_3_height"},
+          "fill": {"value": "#303060"}
+        }
+      },
+      "marks": [
+        {
+          "name": "concat_3_layer_0_marks",
+          "type": "shape",
+          "clip": true,
+          "style": ["geoshape"],
+          "interactive": false,
+          "from": {"data": "source_0"},
+          "encode": {
+            "update": {
+              "fill": {"value": "darkgreen"},
+              "stroke": {"value": "green"},
+              "strokeWidth": {"value": 1},
+              "ariaRoleDescription": {"value": "geoshape"}
+            }
+          },
+          "transform": [{"type": "geoshape", "projection": "projection"}]
+        },
+        {
+          "name": "concat_3_layer_1_marks",
+          "type": "shape",
+          "clip": true,
+          "style": ["geoshape"],
+          "interactive": false,
+          "from": {"data": "source_1"},
+          "encode": {
+            "update": {
+              "fill": {"value": "transparent"},
+              "stroke": {"value": "#2c3898"},
+              "ariaRoleDescription": {"value": "geoshape"}
+            }
+          },
+          "transform": [{"type": "geoshape", "projection": "projection"}]
+        },
+        {
+          "name": "concat_3_layer_2_layer_0_marks",
+          "type": "symbol",
+          "clip": true,
+          "style": ["circle"],
+          "interactive": true,
+          "from": {"data": "data_10"},
+          "encode": {
+            "update": {
+              "opacity": {"value": 1},
+              "fill": {"scale": "concat_3_color", "field": "kium"},
+              "tooltip": {
+                "signal": "{\"Дата\": timeFormat(datum[\"yearmonthdate_ts_ms\"], timeUnitSpecifier([\"year\",\"month\",\"date\"], {\"year-month\":\"%b %Y \",\"year-month-date\":\"%d.%m.%Y \"})), \"АЭС\": isValid(datum[\"u\"]) ? datum[\"u\"] : \"\"+datum[\"u\"], \"На мощности\": isValid(datum[\"unit_info\"]) ? datum[\"unit_info\"] : \"\"+datum[\"unit_info\"], \"Суммарная мощность, МВт\": format(datum[\"mw\"], \"\"), \"КИУМ\": format(datum[\"kium\"], \"\")}"
+              },
+              "ariaRoleDescription": {"value": "circle"},
+              "description": {
+                "signal": "\"longitude: \" + (format(datum[\"longitude\"], \"\")) + \"; latitude: \" + (format(datum[\"latitude\"], \"\")) + \"; КИУМ: \" + (format(datum[\"kium\"], \"\")) + \"; Дата: \" + (timeFormat(datum[\"yearmonthdate_ts_ms\"], timeUnitSpecifier([\"year\",\"month\",\"date\"], {\"year-month\":\"%b %Y \",\"year-month-date\":\"%d.%m.%Y \"}))) + \"; АЭС: \" + (isValid(datum[\"u\"]) ? datum[\"u\"] : \"\"+datum[\"u\"]) + \"; На мощности: \" + (isValid(datum[\"unit_info\"]) ? datum[\"unit_info\"] : \"\"+datum[\"unit_info\"]) + \"; Суммарная мощность, МВт: \" + (format(datum[\"mw\"], \"\"))"
+              },
+              "x": {"field": "concat_3_layer_2_layer_0_x"},
+              "y": {"field": "concat_3_layer_2_layer_0_y"},
+              "size": {"value": 7},
+              "shape": {"value": "M-3.5 -5 m7.355.031 5.611 0c-.902 3.915.491 6.478.997 9.554l-7.679 0c.529-3.053 2.118-5.534 1.071-9.554zm-.1 5.512c0 1.996.003-.002.003-.002l0 4.045-7.227 0 0-4.045.003 .013c0-1.996 1.62-3.561 3.616-3.561 1.996 0 3.605 1.554 3.605 3.55z"}
+            }
+          }
+        },
+        {
+          "name": "concat_3_layer_2_layer_1_marks",
+          "type": "text",
+          "clip": true,
+          "style": ["text"],
+          "interactive": false,
+          "from": {"data": "data_11"},
+          "encode": {
+            "update": {
+              "align": {"value": "left"},
+              "dx": {"value": 15},
+              "dy": {"value": 0},
+              "limit": {"value": 97},
+              "angle": {"value": 340},
+              "fontSize": {"value": 10},
+              "fill": {"value": "#e0e0ff"},
+              "description": {
+                "signal": "\"longitude: \" + (format(datum[\"longitude\"], \"\")) + \"; latitude: \" + (format(datum[\"latitude\"], \"\")) + \"; u: \" + (isValid(datum[\"u\"]) ? datum[\"u\"] : \"\"+datum[\"u\"])"
+              },
+              "x": {"field": "concat_3_layer_2_layer_1_x"},
+              "y": {"field": "concat_3_layer_2_layer_1_y"},
+              "text": {
+                "signal": "isValid(datum[\"u\"]) ? datum[\"u\"] : \"\"+datum[\"u\"]"
+              },
+              "baseline": {"value": "middle"}
+            }
+          }
+        },{
+      "type": "text",
+      "encode": {
+        "update": {
+          "text": {"signal": "timeFormat(index.yearmonthdate_ts_ms, timeUnitSpecifier([\"year\",\"month\",\"date\"], {\"year-month\":\"%b %Y \",\"year-month-date\":\"%d.%m.%Y \"}))"},
+          "x": {"value": 250},
+          "y": {"value": 220},
+          "fill": {"value": "#609060"},
+          "fillOpacity": {"value": 0.55},
+          "fontSize": {"value": 60}
+        }
+      }
+    }
+      ],
+      "legends": [
+        {
+          "title": "КИУМ",
+          "fill": "concat_3_color",
+          "gradientLength": {"signal": "clamp(concat_3_height, 64, 200)"},
+          "encode": {"gradient": {"update": {"opacity": {"value": 1}}}}
+        }
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "concat_0_x",
+      "type": "linear",
+      "domain": {
+        "fields": [
+          {"data": "data_1", "field": "lower_whisker_kium"},
+          {"data": "data_1", "field": "lower_box_kium"},
+          {"data": "data_1", "field": "upper_box_kium"},
+          {"data": "data_1", "field": "upper_whisker_kium"},
+          {"data": "data_2", "field": "lower_box_kium"},
+          {"data": "data_2", "field": "upper_box_kium"},
+          {"data": "data_2", "field": "mid_box_kium"}
+        ]
+      },
+      "range": [0, {"signal": "width"}],
+      "nice": true,
+      "zero": true
+    },
+    {
+      "name": "concat_0_y",
+      "type": "band",
+      "domain": {
+        "fields": [
+          {"data": "data_1", "field": "u"},
+          {"data": "data_2", "field": "u"}
+        ],
+        "sort": true
+      },
+      "range": {"step": {"signal": "concat_0_y_step"}},
+      "paddingInner": 0,
+      "paddingOuter": 0
+    },
+    {
+      "name": "concat_0_color",
+      "type": "ordinal",
+      "domain": [
+        "БАЛАКОВСКАЯ",
+        "БЕЛОЯРСКАЯ",
+        "БИЛИБИНСКАЯ",
+        "КАЛИНИНСКАЯ",
+        "КОЛЬСКАЯ",
+        "КУРСКАЯ",
+        "ЛЕНИНГРАДСКАЯ",
+        "НОВОВОРОНЕЖСКАЯ",
+        "ПАТЭС",
+        "РОСТОВСКАЯ",
+        "СМОЛЕНСКАЯ"
+      ],
+      "range": [
+        "#a6cee3",
+        "#1f78b4",
+        "#b2df8a",
+        "#33a02c",
+        "#fb9a99",
+        "#e31a1c",
+        "#fdbf6f",
+        "#ff7f00",
+        "#cab2d6",
+        "#6a3d9a",
+        "#b15928"
+      ]
+    },
+    {
+      "name": "concat_1_x",
+      "type": "time",
+      "domain": {"data": "data_4", "field": "yearmonthdate_ts_ms"},
+      "range": [0, {"signal": "width"}]
+    },
+    {
+      "name": "concat_1_y",
+      "type": "point",
+      "domain": {"data": "data_4", "field": "u", "sort": true},
+      "range": {"step": {"signal": "concat_1_y_step"}},
+      "padding": 0.5
+    },
+    {
+      "name": "concat_2_x",
+      "type": "time",
+      "domain": {
+        "fields": [
+          {"data": "data_5", "field": "yearmonthdate_ts_ms"},
+          {"data": "data_7", "field": "yearmonthdate_ts_ms"},
+          {"data": "data_8", "field": "yearmonthdate_ts_ms"},
+          {"data": "data_6", "field": "yearmonthdate_ts_ms"}
+        ]
+      },
+      "range": [0, {"signal": "width"}]
+    },
+    {
+      "name": "concat_2_y",
+      "type": "linear",
+      "domain": {
+        "fields": [
+          {"data": "data_5", "field": "mw"},
+          {"data": "data_7", "field": "mw"}
+        ]
+      },
+      "range": [{"signal": "concat_2_height"}, 0],
+      "nice": true,
+      "zero": true
+    },
+    {
+      "name": "concat_3_color",
+      "type": "linear",
+      "domain": [0, 100],
+      "range": {"scheme": "turbo", "extent": [0.37, 1]},
+      "reverse": true,
+      "interpolate": "hcl",
+      "zero": true
+    }
+  ]
+}
