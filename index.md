@@ -1,5 +1,3 @@
-# Работа АЭС в России
-
 <div id="html1" markdown="0">
 <div id="chart_vega" markdown="0"></div>
 
@@ -11,10 +9,9 @@
   }).catch(console.error);
 </script></div>
 
-### О приложении
 
 Данные по работе АЭС собраны с сайта [Росэнергоатома](https://www.rosenergoatom.ru/).
 
-Данное приложение использует библиотеку [Vega](https://vega.github.io/).
+Для постройки диаграмм используется библиотека [Vega](https://vega.github.io/).
 
 &copy; 2021 [Геннадий Лоскутов](https://twitter.com/binxs_se)
