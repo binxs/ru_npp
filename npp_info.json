@@ -1,0 +1,79 @@
+[
+  {
+    "u": "БАЛАКОВСКАЯ",
+    "latitude": 52.092,
+    "longitude": 47.947,
+    "units": 4,
+    "capacity": 4000
+  },
+  {
+    "u": "БЕЛОЯРСКАЯ",
+    "latitude": 56.842,
+    "longitude": 61.317,
+    "units": 2,
+    "capacity": 1485
+  },
+  {
+    "u": "БИЛИБИНСКАЯ",
+    "latitude": 68.05,
+    "longitude": 166.534,
+    "units": 3,
+    "capacity": 36
+  },
+  {
+    "u": "КАЛИНИНСКАЯ",
+    "latitude": 57.903,
+    "longitude": 35.053,
+    "units": 4,
+    "capacity": 4000
+  },
+  {
+    "u": "КОЛЬСКАЯ",
+    "latitude": 67.464,
+    "longitude": 32.479,
+    "units": 4,
+    "capacity": 1760
+  },
+  {
+    "u": "КУРСКАЯ",
+    "latitude": 51.675,
+    "longitude": 35.602,
+    "units": 4,
+    "capacity": 4000
+  },
+  {
+    "u": "ЛЕНИНГРАДСКАЯ",
+    "latitude": 59.828,
+    "longitude": 29.051,
+    "units": 3,
+    "capacity": 3200
+  },
+  {
+    "u": "НОВОВОРОНЕЖСКАЯ",
+    "latitude": 51.268,
+    "longitude": 39.211,
+    "units": 4,
+    "capacity": 3747
+  },
+  {
+    "u": "РОСТОВСКАЯ",
+    "latitude": 47.604,
+    "longitude": 42.372,
+    "units": 4,
+    "capacity": 4030
+  },
+  {
+    "u": "СМОЛЕНСКАЯ",
+    "latitude": 54.166,
+    "longitude": 33.231,
+    "units": 3,
+    "capacity": 3000
+  },
+  {
+    "u": "ПАТЭС",
+    "latitude": 69.683,
+    "longitude": 170.265,
+    "units": 2,
+    "capacity": 74
+  }
+]
