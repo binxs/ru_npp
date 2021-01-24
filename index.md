@@ -12,9 +12,7 @@
 
 </div>
 
-<div  markdown="0">
-  <br/><br/><br/>
-<div>
+#   
 
 Данные по работе АЭС собраны с сайта [Росэнергоатома](https://www.rosenergoatom.ru/).
 
