@@ -3,13 +3,13 @@
 
 @import "{{ site.theme }}";
 .wrapper {
-  width:1280px;
+  width:1600px;
 }
 header {
-  width:200px;
+  width:300px;
 }
 section {
-  width:1080px;
+  width:1200px;
   left: 40px;
 }
 img {
@@ -20,5 +20,5 @@ img {
 footer {
   bottom: 5px;
   opacity: 50%;
-  width:200px;
+  width:250px;
 }
