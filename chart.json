@@ -23,7 +23,7 @@
         }
       ]
     },
-    {
+{
       "name": "npp_data",
       "url":"npp_data.json",
       "format": {"type": "json"}
@@ -103,6 +103,7 @@
       "name": "data_3",
       "source": "data_0",
       "transform": [
+        
         {"type": "filter", "expr": "datum.ts_ms >= lastMonth[0]"}
       ]
     },
