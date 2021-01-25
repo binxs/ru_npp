@@ -103,16 +103,7 @@
       "name": "data_3",
       "source": "data_0",
       "transform": [
-        {
-          "type": "window",
-          "params": [null],
-          "as": ["ts_rank"],
-          "ops": ["rank"],
-          "fields": [null],
-          "sort": {"field": ["ts"], "order": ["descending"]},
-          "groupby": ["u"]
-        },
-        {"type": "filter", "expr": "datum.ts_rank <= 30"}
+        {"type": "filter", "expr": "datum.ts_ms >= lastMonth[0]"}
       ]
     },
     {
@@ -131,7 +122,7 @@
         {"type": "filter", "expr": "datum.op !== datum.op_1"},
         {
           "type": "formula",
-          "expr": "datum.op_1 + '➔' + datum.op",
+          "expr": "(isValid(datum.op_1) ? datum.op_1 : '') + '➔' + datum.op",
           "as": "unit_change"
         },
         {
@@ -155,7 +146,8 @@
           "type": "timeunit",
           "units": ["year", "month", "date"],
           "as": ["yearmonthdate_ts_ms", "yearmonthdate_ts_ms_end"]
-        }
+        },
+        {"type": "extent", "field": "ts_ms", "signal": "timeExtent"}
       ]
     },
     {
@@ -261,6 +253,10 @@
     }
   ],
   "signals": [
+    {
+      "name": "lastMonth",
+      "update": "[timeOffset('month',now(),-1),timeOffset('day',now(),0)]"
+    },
     {"name": "concat_0_y_step", "value": 20},
     {
       "name": "concat_0_height",
@@ -620,7 +616,7 @@
         }
       },
       "signals": [
-        { "name": "init_date_choice", "update": "modify(\"index_store\", {unit: \"concat_2_layer_1\", fields: index_tuple_fields, values: [data('data_5')[0]['yearmonthdate_ts_ms']]}, true)"  },
+        { "name": "init_date_choice", "update": "modify(\"index_store\", {unit: \"concat_2_layer_1\", fields: index_tuple_fields, values: [timeExtent[1]]}, true)"  },
         {
           "name": "npp_tuple",
           "update": "npp_u_legend !== null ? {fields: npp_tuple_fields, values: [npp_u_legend]} : null"
@@ -1115,7 +1111,7 @@
     {
       "name": "concat_1_x",
       "type": "time",
-      "domain": {"data": "data_4", "field": "yearmonthdate_ts_ms"},
+      "domain": {"signal": "timeExtent"},
       "range": [0, {"signal": "width"}]
     },
     {
@@ -1128,14 +1124,7 @@
     {
       "name": "concat_2_x",
       "type": "time",
-      "domain": {
-        "fields": [
-          {"data": "data_5", "field": "yearmonthdate_ts_ms"},
-          {"data": "data_7", "field": "yearmonthdate_ts_ms"},
-          {"data": "data_8", "field": "yearmonthdate_ts_ms"},
-          {"data": "data_6", "field": "yearmonthdate_ts_ms"}
-        ]
-      },
+      "domain": {"signal": "timeExtent"},
       "range": [0, {"signal": "width"}]
     },
     {
