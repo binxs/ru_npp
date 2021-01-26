@@ -514,8 +514,11 @@
               "fill": {"value": "transparent"},
               "stroke": {"scale": "concat_0_color", "field": "u"},
               "ariaRoleDescription": {"value": "point"},
+              "tooltip": {
+                "signal": "{\"Дата\": timeFormat(datum[\"yearmonthdate_ts_ms\"], timeUnitSpecifier([\"year\",\"month\",\"date\"], {\"year-month\":\"%b %Y \",\"year-month-date\":\"%d.%m.%Y \"})), \"АЭС\": isValid(datum[\"u\"]) ? datum[\"u\"] : \"\"+datum[\"u\"], \"На мощности:\": isValid(datum[\"unit_change\"]) ? datum[\"unit_change\"] : \"\"+datum[\"unit_change\"]}"
+              },
               "description": {
-                "signal": "\"ts_ms (year-month-date): \" + (timeFormat(datum[\"yearmonthdate_ts_ms\"], timeUnitSpecifier([\"year\",\"month\",\"date\"], {\"year-month\":\"%b %Y \",\"year-month-date\":\"%d.%m.%Y \"}))) + \"; u: \" + (isValid(datum[\"u\"]) ? datum[\"u\"] : \"\"+datum[\"u\"]) + \"; АЭС: \" + (isValid(datum[\"u\"]) ? datum[\"u\"] : \"\"+datum[\"u\"])"
+                "signal": "\"ts_ms (year-month-date): \" + (timeFormat(datum[\"yearmonthdate_ts_ms\"], timeUnitSpecifier([\"year\",\"month\",\"date\"], {\"year-month\":\"%b %Y \",\"year-month-date\":\"%d.%m.%Y \"}))) + \"; u: \" + (isValid(datum[\"u\"]) ? datum[\"u\"] : \"\"+datum[\"u\"]) + \"; АЭС: \" + (isValid(datum[\"u\"]) ? datum[\"u\"] : \"\"+datum[\"u\"]) + \"; Дата: \" + (timeFormat(datum[\"yearmonthdate_ts_ms\"], timeUnitSpecifier([\"year\",\"month\",\"date\"], {\"year-month\":\"%b %Y \",\"year-month-date\":\"%d.%m.%Y \"}))) + \"; На мощности:: \" + (isValid(datum[\"unit_change\"]) ? datum[\"unit_change\"] : \"\"+datum[\"unit_change\"]) + \"; unit_change: \" + (isValid(datum[\"unit_change\"]) ? datum[\"unit_change\"] : \"\"+datum[\"unit_change\"])"
               },
               "x": {"scale": "concat_1_x", "field": "yearmonthdate_ts_ms"},
               "y": {"scale": "concat_1_y", "field": "u"}
@@ -541,8 +544,11 @@
                 },
                 {"value": 0.1}
               ],
+              "tooltip": {
+                "signal": "{\"Дата\": timeFormat(datum[\"yearmonthdate_ts_ms\"], timeUnitSpecifier([\"year\",\"month\",\"date\"], {\"year-month\":\"%b %Y \",\"year-month-date\":\"%d.%m.%Y \"})), \"АЭС\": isValid(datum[\"u\"]) ? datum[\"u\"] : \"\"+datum[\"u\"], \"На мощности:\": isValid(datum[\"unit_change\"]) ? datum[\"unit_change\"] : \"\"+datum[\"unit_change\"]}"
+              },
               "description": {
-                "signal": "\"ts_ms (year-month-date): \" + (timeFormat(datum[\"yearmonthdate_ts_ms\"], timeUnitSpecifier([\"year\",\"month\",\"date\"], {\"year-month\":\"%b %Y \",\"year-month-date\":\"%d.%m.%Y \"}))) + \"; u: \" + (isValid(datum[\"u\"]) ? datum[\"u\"] : \"\"+datum[\"u\"]) + \"; АЭС: \" + (isValid(datum[\"u\"]) ? datum[\"u\"] : \"\"+datum[\"u\"]) + \"; unit_change: \" + (isValid(datum[\"unit_change\"]) ? datum[\"unit_change\"] : \"\"+datum[\"unit_change\"])"
+                "signal": "\"ts_ms (year-month-date): \" + (timeFormat(datum[\"yearmonthdate_ts_ms\"], timeUnitSpecifier([\"year\",\"month\",\"date\"], {\"year-month\":\"%b %Y \",\"year-month-date\":\"%d.%m.%Y \"}))) + \"; u: \" + (isValid(datum[\"u\"]) ? datum[\"u\"] : \"\"+datum[\"u\"]) + \"; АЭС: \" + (isValid(datum[\"u\"]) ? datum[\"u\"] : \"\"+datum[\"u\"]) + \"; Дата: \" + (timeFormat(datum[\"yearmonthdate_ts_ms\"], timeUnitSpecifier([\"year\",\"month\",\"date\"], {\"year-month\":\"%b %Y \",\"year-month-date\":\"%d.%m.%Y \"}))) + \"; На мощности:: \" + (isValid(datum[\"unit_change\"]) ? datum[\"unit_change\"] : \"\"+datum[\"unit_change\"]) + \"; unit_change: \" + (isValid(datum[\"unit_change\"]) ? datum[\"unit_change\"] : \"\"+datum[\"unit_change\"])"
               },
               "x": {"scale": "concat_1_x", "field": "yearmonthdate_ts_ms"},
               "y": {"scale": "concat_1_y", "field": "u"},
